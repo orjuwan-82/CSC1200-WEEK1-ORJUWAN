@@ -1,0 +1,177 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "66d7903b-9324-4a48-82de-d47e5a447764",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  30\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Positive\n",
+      "The number is between 10 and 50\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = int(input(\"Enter a number: \"))\n",
+    "\n",
+    "if num > 0:\n",
+    "    print(\"Positive\")\n",
+    "else:\n",
+    "    print(\"Not positive\")\n",
+    "if 10 <= num <= 50:\n",
+    "    print(\"The number is between 10 and 50\")\n",
+    "else:\n",
+    "    print(\"The number is not between 10 and 50\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "2a0ee986-2687-4a78-bf5d-24b375b9cf43",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1. Addition\n",
+      "2. Subtraction\n",
+      "3. Multiplication\n",
+      "4. Division\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Choose an option (1-4):  3\n",
+      "Enter first number:  12\n",
+      "Enter second number:  3\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Result: 36.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"1. Addition\")\n",
+    "print(\"2. Subtraction\")\n",
+    "print(\"3. Multiplication\")\n",
+    "print(\"4. Division\")\n",
+    "\n",
+    "choice = input(\"Choose an option (1-4): \")\n",
+    "num1 = float(input(\"Enter first number: \"))\n",
+    "num2 = float(input(\"Enter second number: \"))\n",
+    "match choice:\n",
+    "    case \"1\":\n",
+    "        print(\"Result:\", num1 + num2)\n",
+    "    case \"2\":\n",
+    "        print(\"Result:\", num1 - num2)\n",
+    "    case \"3\":\n",
+    "        print(\"Result:\", num1 * num2)\n",
+    "    case \"4\":\n",
+    "        if num2 !=0:\n",
+    "            print(\"Result:\", num1 / num2)\n",
+    "        else:\n",
+    "            print(\"Cannot divide by zero\")\n",
+    "    case _:\n",
+    "        print(\"Invalid choice\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "d66377e3-c514-4c11-bee6-7e6e93046454",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter student score:  90\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Passed\n",
+      "Excellent!\n"
+     ]
+    }
+   ],
+   "source": [
+    "score = int(input(\"Enter student score: \"))\n",
+    "if score >=50:\n",
+    "    print(\"Passed\")\n",
+    "else:\n",
+    "    print(\"Failed\")\n",
+    "if score >= 90:\n",
+    "    grade = \"A\"\n",
+    "elif score >= 80:\n",
+    "    grade = \"B\"\n",
+    "elif score >= 70:\n",
+    "    grade =\"C\"\n",
+    "elif score >= 60:\n",
+    "    grade = \"D\"\n",
+    "else:\n",
+    "    grade = \"F\"\n",
+    "match grade:\n",
+    "    case \"A\":\n",
+    "        print(\"Excellent!\")\n",
+    "    case \"B\":\n",
+    "        print(\"Very Good!\")\n",
+    "    case \"C\":\n",
+    "        print(\"Good\")\n",
+    "    case \"D\":\n",
+    "        print(\"Pass\")\n",
+    "    case \"F\":\n",
+    "        print(\"Fail\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9f028108-f49c-48a2-ade8-8ee8e13c2e29",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
