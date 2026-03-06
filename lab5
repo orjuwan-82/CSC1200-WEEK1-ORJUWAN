@@ -1,0 +1,181 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d26bd7a5-6299-4146-92bc-b5bcfa034f07",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "\n",
+    "def area(r):\n",
+    "    return math.pi * r * r\n",
+    "\n",
+    "r = float(input(\"Enter the radius of a circle: \"))\n",
+    "\n",
+    "circumference = lambda r: 2 * math.pi * r\n",
+    "\n",
+    "a = round(area(r), 2)\n",
+    "c = round(circumference(r), 2)\n",
+    "\n",
+    "print(\"Area:\", format(a, \".2f\"))\n",
+    "print(\"Circumference:\", format(c, \".2f\"))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "25a467e0-67dc-447b-86c2-d32a8b5cfcc1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a string:  11\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Numbers found: [11]\n",
+      "Sum: 11\n",
+      "Doubled value: 22\n"
+     ]
+    }
+   ],
+   "source": [
+    "import re\n",
+    "\n",
+    "def sum_numbers(nums):\n",
+    "    return sum(nums)\n",
+    "\n",
+    "text = input(\"Enter a string: \")\n",
+    "\n",
+    "numbers = re.findall(r'\\d+', text)\n",
+    "numbers = [int(n) for n in numbers]\n",
+    "\n",
+    "total = sum_numbers(numbers)\n",
+    "\n",
+    "double = lambda x: x * 2\n",
+    "\n",
+    "print(\"Numbers found:\", numbers)\n",
+    "print(\"Sum:\", total)\n",
+    "print(\"Doubled value:\", double(total))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5332a14c-405f-482f-aa4d-c63c133731be",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "\n",
+    "def square_numbers(nums):\n",
+    "    return list(map(lambda x: x*x, nums))\n",
+    "\n",
+    "data = input(\"Enter numbers separated by commas: \")\n",
+    "\n",
+    "nums = list(map(float, data.split(\",\")))\n",
+    "\n",
+    "squares = square_numbers(nums)\n",
+    "\n",
+    "max_square = max(squares)\n",
+    "\n",
+    "sqrt_sum = math.sqrt(sum(squares))\n",
+    "\n",
+    "print(\"Squares:\", squares)\n",
+    "print(\"Maximum square:\", max_square)\n",
+    "print(\"Square root of sum of squares:\", sqrt_sum)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "51c90be2-0baa-44b4-bd54-1d6e8e412848",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import re\n",
+    "import math\n",
+    "\n",
+    "password = input(\"Enter a password: \")\n",
+    "\n",
+    "upper = re.search(r\"[A-Z]\", password)\n",
+    "lower = re.search(r\"[a-z]\", password)\n",
+    "number = re.search(r\"[0-9]\", password)\n",
+    "\n",
+    "if upper and lower and number:\n",
+    "    print(\"Password is strong\")\n",
+    "else:\n",
+    "    print(\"Password is weak\")\n",
+    "\n",
+    "def average(scores):\n",
+    "    return sum(scores)/len(scores)\n",
+    "\n",
+    "data = input(\"Enter 5 scores separated by spaces: \")\n",
+    "\n",
+    "scores = list(map(float, data.split()))\n",
+    "\n",
+    "avg = average(scores)\n",
+    "\n",
+    "round_avg = math.ceil(avg)\n",
+    "\n",
+    "print(\"Rounded average score:\", round_avg)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e7c4e9f6-e7a7-471a-a77e-49672b89832f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import re\n",
+    "import math\n",
+    "\n",
+    "text = input(\"Enter a paragraph: \")\n",
+    "\n",
+    "words = re.findall(r'\\b[AEIOUaeiou]\\w*', text)\n",
+    "\n",
+    "def count_vowels(t):\n",
+    "    return len(re.findall(r'[aeiouAEIOU]', t))\n",
+    "\n",
+    "vowels = count_vowels(text)\n",
+    "\n",
+    "length = list(map(lambda x: len(x), words))\n",
+    "\n",
+    "avg_len = round(sum(length)/len(length), 2) if length else 0\n",
+    "\n",
+    "print(\"Words starting with vowels:\", words)\n",
+    "print(\"Total vowels:\", vowels)\n",
+    "print(\"Average vowel-word length:\", avg_len)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
